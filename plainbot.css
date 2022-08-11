@@ -1,0 +1,168 @@
+/*
+Style the body element to change the background of the messenger. Here we're using an image, but 
+you can just as easily use a solid color or a gradient.
+*/
+body {
+  background: rgb(103,193,142);
+  background: linear-gradient(180deg, rgba(103,193,142,1) 0%, rgba(89,167,123,1) 100%);
+}
+
+
+/* 
+1. Chat Header
+*/
+
+/* The Title Background */
+.web-messenger-header {
+  height: 60px;
+  min-height: 60px;
+  background: rgb(66,149,102);
+  background: linear-gradient(180deg, rgba(66,149,102,1) 0%, rgba(45,80,61,1) 100%);
+  font-size:1.5em;
+  color:white;
+  box-shadow: 1px 9px 5px -4px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 1px 9px 5px -4px rgba(0,0,0,0.2);
+  -moz-box-shadow: 1px 9px 5px -4px rgba(0,0,0,0.2);
+  border-radius: 12px 0px 0px 0px;
+  -webkit-border-radius: 12px 0px 0px 0px;
+  -moz-border-radius: 12px 0px 0px 0px;
+}
+
+/* The Title Text */
+.web-messenger-header div.title {
+  color:white;
+  text-align:left;
+}
+
+/* The Reset Button */
+button.clear-chat svg {
+  stroke: white;
+  fill: white;
+}
+
+/* The Close Button */
+/* NOTE: Only applies when embedding the messenger as a widget.
+This is not shown when embedding as an iFrame. */
+button.close svg {
+  stroke: white;
+  fill: white;
+}
+
+/* 2. Messages */
+/* All Messages */
+li.message div.bubble {
+  font-size:1.2em;
+  border-radius:5px;
+}
+
+/* Ths bots avatar image */
+li.message > div.main > img.icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+}
+
+
+/* Message from the user */
+li.user.message > div.main > div.bubble {
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: -1px 2px 30px rgba(17, 54, 84, 0.03);
+}
+
+/* Messages from Bot */
+li.bot.message > div.main > div.bubble {
+  background-color: rgba(255,255,255,0.8);
+}
+
+/* The message timestamp */
+div.timestamp {
+  color: cornsilk;
+}
+
+/* Ths bots avatar image */
+li.message > div.main > img.icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+}
+
+/* The typing indicator */
+.web-messenger-typing > div {
+  background-color: rgb(201, 201, 211);
+}
+
+/* 3. Choices */
+/* Quick Reply Bubbles */
+li.message div.choice {
+    border-color: rgba(200,197,0,0.6);
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 20px;
+    padding:10px;
+}
+
+/* The body of a card */
+div.card {
+    border: solid 1px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 0;
+    background-color: rgba(255,255,255,0.95);
+}
+
+/* The message of the card */
+div.card > div.main {
+  background-color: rgba(90,90,90,0.8); 
+}
+
+/* The text in the message area of the card*/
+div.card > div.main > div.text {
+  color:white;
+} 
+
+/* The title of the card */
+div.card > div.main > div.title {
+  color:white;
+} 
+
+/* The message composer (where the user types their chats) */
+div.compose {
+    background-color: rgba(255,255,255,0.7);
+    padding: 10px 20px;
+}
+
+
+/* The actual composer textbox */
+div.compose textarea {
+    background-color:rgba(255,255,255,0);
+    color:#999;
+}
+
+/* The send button inside the composer*/
+#send-button-icon {
+  stroke: #999;
+  fill: #999;
+}
+
+/* The upload button inside the composer */
+#upload-button-icon {
+  fill:#999;
+  stroke: #999;
+}
+
+/* This class controls a blank white circle that
+   is a placeholder for the app avatar while the messenger is loading.
+   It can look out of place on a colorful background, so feel free to hide it
+   if it bothers you.
+*/
+.web-messenger-message-icon-placeholder {
+  display:none;
+}
+
+/* Attribution */
+div.powered-by {
+  color: cornsilk;
+}
+
+
